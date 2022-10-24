@@ -2,7 +2,8 @@ Script started on 2022-10-23 20:13:30-04:00
 0)
 [guoman@sjsu A4]$ grep retweeted downloaded_tweets_extend_nolf2.tsv|awk -F '\t' '{print $5}'|sed 's/^.* id=//g'|sed 's/ type=retweeted.//g' > retweets.txt
 [guoman@sjsu A4]$ fgrep -f retweets.txt downloaded_tweets_extend_original_nolf2.tsv|awk -F'\t' '{print $2}' > users.retweeted.txt
-[guoman@sjsu A4]$ sort users.retweeted.txt|uniq -c|sort -n|tail -10                 159 1290232189615894531
+[guoman@sjsu A4]$ sort users.retweeted.txt|uniq -c|sort -n|tail -10                 
+    159 1290232189615894531
     178 380648579
     179 1229752606714728454
     189 42836999
